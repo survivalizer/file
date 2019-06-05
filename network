@@ -1,0 +1,19 @@
+# This file describes the network interfaces available on your system
+
+# For more information, see netplan(5).
+
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+          ens160:
+                  dhcp4: no
+                  dhcp6: no
+                  addresses: [x.x.x.x/32]
+                  gateway4: y.y.y.254
+                  nameservers:
+                          addresses: [208.67.222.222,208.67.220.220]
+                  routes:
+                  - to: y.y.y.254/32
+                    via: 0.0.0.0
+                    scope: link
