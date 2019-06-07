@@ -6,14 +6,14 @@ network:
   version: 2
   renderer: networkd
   ethernets:
-          ens160:
+          ens18:
                   dhcp4: no
                   dhcp6: no
-                  addresses: [x.x.x.x/32]
-                  gateway4: y.y.y.254
+                  addresses: [51.79.62.9/32]
+                  gateway4: 6.70.180.254
                   nameservers:
-                          addresses: [208.67.222.222,208.67.220.220]
+                          addresses: [1.1.1.1,1.0.0.1]
                   routes:
-                  - to: y.y.y.254/32
+                  - to: 6.70.180.254/32
                     via: 0.0.0.0
                     scope: link
